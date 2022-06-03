@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package api;
+
+option go_package = "github.com/Boutit/user/api";
+
+import "api/user.proto";
+
+service UserService {
+  rpc CreateUser(CreateUserRequest) returns (CreateUserResponse) {};
+}

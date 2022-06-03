@@ -1,8 +1,8 @@
 syntax = "proto3";
 
-package user.api;
+package api;
 
-option go_package = "github.com/Boutit/user";
+option go_package = "github.com/Boutit/user/api";
 
 message User {
   string id = 1;
