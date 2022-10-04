@@ -13,6 +13,8 @@ message User {
   string city = 6;
   string city_lat = 7;
   string city_lng = 8;
+  string username = 9;
+  string name = 10;
 }
 
 message CreateUserRequest {
