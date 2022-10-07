@@ -3,6 +3,7 @@ package store
 import (
 	"context"
 	_ "database/sql"
+	"fmt"
 
 	"github.com/Boutit/user/api"
 	"github.com/Boutit/user/internal/config"
@@ -28,8 +29,9 @@ func CreatePostgresStore(cfg config.Config) (UserStore, error) {
 }
 
 func (store *postgresStore) CreateUser(ctx context.Context,  user *api.User) error {
-	_, err := store.conn.NamedExecContext(ctx, createUserSQL, user)
+	_, err := store.conn.NamedExecContext(ctx, createAccountSQL, user)
 	if err != nil {
+		fmt.Println("farther", err)
 		return err
 	}
 	return nil

@@ -10,7 +10,7 @@ import "api/google/api/annotations.proto";
 service UserService {
   rpc CreateUser(CreateUserRequest) returns (CreateUserResponse) {
     option (google.api.http) = {
-      post: "/v1/create_user"
+      post: "/v1/user"
       body: "*"
       response_body: "*"
     };

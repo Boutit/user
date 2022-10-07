@@ -6,13 +6,7 @@ option go_package = "github.com/Boutit/user/api";
 
 message User {
   string id = 1;
-  string phone = 2;
-  string email = 3;
-  string birthday = 4;
-  string gender = 5;
-  string city = 6;
   string city_lat = 7;
-  string city_lng = 8;
   string username = 9;
   string name = 10;
 }

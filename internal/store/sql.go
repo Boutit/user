@@ -1,27 +1,15 @@
 package store
 
 const (
-	createUserSQL = `
-		INSERT into user (
-			phone,
-			email,
-			birthday,
-			gender,
-			city,
-			city_lat,
-			city_lng,
+	createAccountSQL = `
+		INSERT into account (
 			username,
-			name
+			name,
+			city_lat
 		) VALUES (
-			:phone,
-			:email,
-			:birthday,
-			:gender,
-			:city,
-			:city_lat,
-			:city_lng,
 			:username,
-			:name
+			:name,
+			:citylat
 		)
 	`
 )
