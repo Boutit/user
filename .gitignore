@@ -2,3 +2,5 @@ config/config.local.yml
 config/config.development.yml
 config/config.staging.yml
 config/config.production.yml
+.vscode/*
+**/.history

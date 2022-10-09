@@ -21,7 +21,7 @@ func GetConfig(env string) Config {
 	err := viper.ReadInConfig()
 	
 	if err != nil {
-		fmt.Println("PROBLEMS")
+		fmt.Println("Could not read config")
 		fmt.Println(err)
 	}
 
