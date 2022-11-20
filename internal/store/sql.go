@@ -1,8 +1,8 @@
 package store
 
 const (
-	createAccountSQL = `
-		INSERT into account (
+	createUserSQL = `
+		INSERT into user (
 			username,
 			name,
 			city_lat
@@ -11,5 +11,11 @@ const (
 			:name,
 			:citylat
 		)
+	`
+)
+
+const (
+	getUserByIdSQL = `
+		SELECT * FROM user WHERE id=:id
 	`
 )

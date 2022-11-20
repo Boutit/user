@@ -36,7 +36,7 @@ func main() {
 		log.Fatalf("failed to listen: %v", err)
 	}
 	
-	log.Printf("listening on %s", appConnStr)
+	log.Printf("user service listening on http://%s", appConnStr)
 	 
 	// create a gRPC server
 	g := grpc.NewServer()

@@ -4,17 +4,22 @@ package api;
 
 option go_package = "github.com/Boutit/user/api";
 
-message User {
-  string id = 1;
-  string city_lat = 7;
-  string username = 9;
-  string name = 10;
+message SignupUserRequest {
+  string email_or_phone = 1;
+  string name = 2;
+  string password = 3;
+  string username = 4;
 }
 
-message CreateUserRequest {
-  User user = 1;
+message SignupUserResponse {
+  string user_id = 1;
 }
 
-message CreateUserResponse {
- string user_id = 1; 
+message LoginUserRequest {
+  string email_phone_or_username = 1;
+  string password = 2;
+}
+
+message LoginUserResponse{
+
 }
