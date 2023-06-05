@@ -1,16 +1,16 @@
 package server
 
 import (
-	api "github.com/Boutit/user/api/protos/boutit/user"
+	"github.com/Boutit/user/api/protos/boutit/user"
 	"github.com/Boutit/user/internal/store"
 )
 
 type UserServiceServer interface {
-	api.UserServiceServer
+	user.UserServiceServer
 }
 
 type userServiceServer struct {
-	api.UnimplementedUserServiceServer
+	user.UnimplementedUserServiceServer
 	userStore store.UserStore
 }
 
