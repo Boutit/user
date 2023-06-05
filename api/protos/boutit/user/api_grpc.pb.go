@@ -2,9 +2,9 @@
 // versions:
 // - protoc-gen-go-grpc v1.2.0
 // - protoc             v3.21.7
-// source: api/api.proto
+// source: api/protos/boutit/user/api.proto
 
-package api
+package user
 
 import (
 	context "context"
@@ -36,7 +36,7 @@ func NewUserServiceClient(cc grpc.ClientConnInterface) UserServiceClient {
 
 func (c *userServiceClient) SignupUser(ctx context.Context, in *SignupUserRequest, opts ...grpc.CallOption) (*SignupUserResponse, error) {
 	out := new(SignupUserResponse)
-	err := c.cc.Invoke(ctx, "/api.UserService/SignupUser", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/boutit.user.api.UserService/SignupUser", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -45,7 +45,7 @@ func (c *userServiceClient) SignupUser(ctx context.Context, in *SignupUserReques
 
 func (c *userServiceClient) LoginUser(ctx context.Context, in *LoginUserRequest, opts ...grpc.CallOption) (*LoginUserResponse, error) {
 	out := new(LoginUserResponse)
-	err := c.cc.Invoke(ctx, "/api.UserService/LoginUser", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/boutit.user.api.UserService/LoginUser", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -92,7 +92,7 @@ func _UserService_SignupUser_Handler(srv interface{}, ctx context.Context, dec f
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/api.UserService/SignupUser",
+		FullMethod: "/boutit.user.api.UserService/SignupUser",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(UserServiceServer).SignupUser(ctx, req.(*SignupUserRequest))
@@ -110,7 +110,7 @@ func _UserService_LoginUser_Handler(srv interface{}, ctx context.Context, dec fu
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/api.UserService/LoginUser",
+		FullMethod: "/boutit.user.api.UserService/LoginUser",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(UserServiceServer).LoginUser(ctx, req.(*LoginUserRequest))
@@ -122,7 +122,7 @@ func _UserService_LoginUser_Handler(srv interface{}, ctx context.Context, dec fu
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var UserService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "api.UserService",
+	ServiceName: "boutit.user.api.UserService",
 	HandlerType: (*UserServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -135,5 +135,5 @@ var UserService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "api/api.proto",
+	Metadata: "api/protos/boutit/user/api.proto",
 }

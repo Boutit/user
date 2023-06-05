@@ -8,7 +8,7 @@ import (
 
 	_ "github.com/lib/pq"
 
-	"github.com/Boutit/user/api"
+	api "github.com/Boutit/user/api/protos/boutit/user"
 	"github.com/Boutit/user/internal/config"
 	"github.com/Boutit/user/internal/server"
 	"github.com/Boutit/user/internal/store"

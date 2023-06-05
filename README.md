@@ -10,7 +10,7 @@ make run.local
 
 ##### grpcurl
 
-grpcurl --plaintext -d '{"user": {"username": "john_doe"}}' localhost:8080 api.UserService/CreateUser
+grpcurl --plaintext -d '{"user": {"username": "john_doe"}}' localhost:8080 boutit.user.api.UserService/CreateUser
 
 ##### curl
 

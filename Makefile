@@ -1,5 +1,5 @@
 SERVER_PATH="cmd/server/main.go"
-PROTO_RELATIVE_PATH="api"
+PROTO_RELATIVE_PATH="api/protos/boutit/user"
 ENV="local"
 
 codegen.proto:

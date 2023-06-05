@@ -1,7 +1,7 @@
 package server
 
 import (
-	"github.com/Boutit/user/api"
+	api "github.com/Boutit/user/api/protos/boutit/user"
 	"github.com/Boutit/user/internal/store"
 )
 

@@ -3,7 +3,7 @@ package server
 import (
 	"context"
 
-	"github.com/Boutit/user/api"
+	api "github.com/Boutit/user/api/protos/boutit/user"
 	"github.com/Boutit/user/internal/models"
 	"github.com/Boutit/user/internal/utils"
 )

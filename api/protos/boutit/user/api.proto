@@ -1,10 +1,10 @@
 syntax = "proto3";
 
-package api;
+package boutit.user.api;
 
-option go_package = "github.com/Boutit/user/api";
+option go_package = "github.com/Boutit/user/api/protos/boutit/user";
 
-import "api/user.proto";
+import "api/protos/boutit/user/user.proto";
 import "api/google/api/annotations.proto";
 
 service UserService {

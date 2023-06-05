@@ -1,8 +1,8 @@
 syntax = "proto3";
 
-package api;
+package boutit.user.api;
 
-option go_package = "github.com/Boutit/user/api";
+option go_package = "github.com/Boutit/user/api/protos/boutit/user";
 
 message SignupUserRequest {
   string email_or_phone = 1;
