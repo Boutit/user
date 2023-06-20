@@ -22,6 +22,7 @@ type UserStore interface {
 
 func CreatePostgresStore(cfg config.Config) (UserStore, error) {
 	db, err := sqlx.Connect("postgres", cfg.PostgresConfig.GetConnectionString())
+	db.MustExec(createSchemaSQL)
 	if err != nil {
 		return nil, err
 	}

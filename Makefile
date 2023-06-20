@@ -7,14 +7,14 @@ codegen.proto:
 	--go-grpc_out=. --go-grpc_opt=paths=source_relative --go-grpc_opt=require_unimplemented_servers=false \
 	--grpc-gateway_out=. --grpc-gateway_opt paths=source_relative --proto_path=.
 
-run.local:
+local:
 	ENV=local go run cmd/server/main.go
 
-run.development:
+development:
 	ENV=development go run cmd/server/main.go
 
-run.staging:
+staging:
 	ENV=staging go run cmd/server/main.go
 
-run.production:
+production:
 	ENV=production go run cmd/server/main.go
