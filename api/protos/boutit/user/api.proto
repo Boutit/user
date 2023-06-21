@@ -10,7 +10,7 @@ import "api/google/api/annotations.proto";
 service UserService {
   rpc SignupUser(SignupUserRequest) returns (SignupUserResponse) {
     option (google.api.http) = {
-      post: "/v1/signup"
+      post: "/v1/user/signup"
       body: "*"
       response_body: "*"
     };
@@ -18,7 +18,7 @@ service UserService {
 
   rpc LoginUser(LoginUserRequest) returns (LoginUserResponse) {
     option (google.api.http) = {
-      post: "/v1/login"
+      post: "/v1/user/login"
       body: "*"
       response_body: "*"
     };

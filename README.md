@@ -14,4 +14,6 @@ grpcurl --plaintext -d '{"username": "john_doe"}' localhost:9000 boutit.user.api
 
 ##### curl
 
-curl -X POST -k http://localhost:9000/v1/user -d '{"username": "jane_doe"}'
+Note: curl must be done through api-gateway
+
+curl -X POST -k http://localhost:8090/v1/signup -d '{"email_or_phone": "6472289484"}'
